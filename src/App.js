@@ -55,9 +55,15 @@ let api_url = await
 
   render() {
     return(
-     <div>
-       <Info/>
-       <Form weatherMetod={this.getWether}/>
+     <div className="wrapper">
+       <div className="main">
+       <div className="container">
+         <div className="row">
+           <div className="col-sm-5 info">
+             <Info/>
+           </div>
+           <div className="col-sm-7 form">
+              <Form weatherMetod={this.getWether}/>
        <Weather 
        temp={this.state.temp}
        city={this.state.city}
@@ -66,6 +72,11 @@ let api_url = await
        sunset={this.state.sunset}
        error={this.state.error}
        />
+           </div>
+         </div>
+       </div>
+       
+      </div>
      </div> 
     )
   }
